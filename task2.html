@@ -1,0 +1,51 @@
+array functoion button
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Click Event</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    margin-top:100px;
+}
+
+button{
+    padding:12px 25px;
+    font-size:16px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Login Example</h2>
+
+<button id="loginBtn">Login</button>
+
+<script>
+
+document.getElementById("loginBtn").addEventListener("click", (e) => {
+
+    console.log("Login button clicked");
+
+    alert("Login process started");
+
+});
+
+</script>
+
+</body>
+</html>
