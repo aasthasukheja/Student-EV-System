@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+body{
+    font-family: Arial, sans-serif;
+    margin:40px;
+    background:#f4f6f8;
+}
+
+h1{
+    color:#333;
+}
+
+button{
+    padding:10px 20px;
+    font-size:16px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+.result-box{
+    margin-top:20px;
+    padding:15px;
+    background:white;
+    border-radius:6px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+ul{
+    margin-top:10px;
+}
+</style>
+
+</head>
+<body>
+    <h1>Javascript arrow functions and array methods</h1>
+    <p>Clcik the button to run different js functions</p>
+    <button id="run-btn">Run JS Operations</button>
+    <div class="result-box">
+        <h3>Results</h3>
+        <ul id="output"></ul>
+    </div>
+    <script>
+        const numbers = [1,2,3,4,5,6,7];
+        const people = [
+            { name : "Alice", age : 25},
+            { name : "Alic", age : 26},
+            { name : "Ali", age : 27},
+        ];
+
+        const runBtn = document.getElementById("run-btn");
+        const output = document.getElementById("ouput");
+
+        const squaredNumbers = numbers.map(num => num * num);
+
+        const adults = people.filter(person => person.age) >= 30;
+
+        const totalAge = people.reduce((sum, person) => sum + person.age , 0);
+
+    
+        runBtn.addEventListener('click', () => {
+            output.innerHTML = "";
+
+            const sqauredList = document.createElement('li');
+            sqauredList.textContent = "Squared Numbers : " + squaredNumbers.join(',');
+            output.appendChild(sqauredList);
+
+            const adultList = document.createElement('li');
+            adultList.textContent = 'Adults: ' + adults.map(person => people.name).join(', ');
+            output.appendChild(adultList);
+
+            const totalAgeList = document.createElement('li');
+            totalAgeList.textContent = 'Total Age: ' + totalAge;
+            output.appendChild(totalAgeList);
+
+            
+        });
+
+    </script>
+</body>
+</html>
