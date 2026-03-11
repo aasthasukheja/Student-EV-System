@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pass Students</title>
+</head>
+<body>
+
+<h2>Students who passed (marks > 50)</h2>
+<p id="result"></p>
+
+<script>
+const marks = [35, 67, 48, 90, 55, 30];
+
+// filter marks greater than 50
+const passedStudents = marks.filter(mark => mark > 50);
+
+// display result
+document.getElementById("result").innerHTML = passedStudents;
+</script>
+
+</body>
+</html>

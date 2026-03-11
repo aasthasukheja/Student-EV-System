@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce Price Update</title>
+</head>
+<body>
+
+<h2>Discounted Prices</h2>
+<p id="result"></p>
+
+<script>
+const prices = [1200, 800, 1500, 2000];
+
+// apply 10% discount
+const discountedPrices = prices.map(price => price * 0.9);
+
+// display result
+document.getElementById("result").innerHTML = discountedPrices;
+</script>
+
+</body>
+</html>
