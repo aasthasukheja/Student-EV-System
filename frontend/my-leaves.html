@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Leaves</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="loadMyLeaves()">
+    <div class="container">
+        <h2>My Leave Requests</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Leave Type</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="myLeavesBody"></tbody>
+        </table>
+
+        <button onclick="window.location.href='dashboard.html'">Back</button>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/leave.js"></script>
+</body>
+</html>
