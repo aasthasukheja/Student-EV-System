@@ -1,0 +1,81 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart Total</title>
+</head>
+<body>
+
+<h2>Total Cart Value</h2>
+<p id="result"></p>
+
+<script>
+const cart = [500, 1200, 800, 1500];
+
+// calculate total using reduce()
+const total = cart.reduce((sum, price) => sum + price, 0);
+
+// display result
+document.getElementById("result").innerHTML = total;
+=======
+hover button
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouse Hover Event</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    margin-top:100px;
+}
+
+button{
+    padding:10px 20px;
+    font-size:16px;
+    background:#28a745;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1e7e34;
+}
+
+#message{
+    margin-top:20px;
+    font-size:18px;
+    color:#333;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Hover Over the Button</h2>
+
+<button id="submitBtn">Submit</button>
+
+<p id="message"></p>
+
+<script>
+
+document.getElementById("submitBtn").addEventListener("mouseover", () => {
+
+    console.log("Mouse hovered over submit button");
+
+    document.getElementById("message").textContent =
+    "Mouse hovered over submit button";
+
+});
+
+>>>>>>> 87481ec5bd1431962997c11c9e5fc817a7540f40
+</script>
+
+</body>
+</html>

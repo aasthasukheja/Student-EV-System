@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apply Leave</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Apply Leave</h2>
+
+        <input type="text" id="leaveType" placeholder="Leave Type">
+        <input type="date" id="startDate">
+        <input type="date" id="endDate">
+        <textarea id="reason" placeholder="Reason"></textarea>
+
+        <button onclick="applyLeave()">Submit Leave</button>
+        <button onclick="window.location.href='dashboard.html'">Back</button>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/leave.js"></script>
+</body>
+</html>
