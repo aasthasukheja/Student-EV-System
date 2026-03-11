@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Character Counter</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:40px;
+}
+
+textarea{
+    width:300px;
+    height:120px;
+    padding:10px;
+    font-size:16px;
+}
+
+#count{
+    margin-top:10px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Live Character Counter</h2>
+
+<textarea id="message" placeholder="Type your message..."></textarea>
+
+<p id="count">Characters: 0</p>
+
+<script>
+
+document.getElementById("message").addEventListener("keyup", (e) => {
+
+    let length = e.target.value.length;
+
+    document.getElementById("count").innerText = "Characters: " + length;
+
+});
+
+</script>
+
+</body>
+</html>
